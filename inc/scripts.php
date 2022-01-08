@@ -15,8 +15,9 @@ function bellaworks_scripts() {
     false 
   );
 
-  /* There were some issues on Gulp when compiling vendor js */
+  /* There were some issues on Gulp when compiling vendor js. */
   wp_enqueue_script( 
+    // 'bellaworks-blocks', get_template_directory_uri() . '/assets/js/vendor.min.js', array(), '20220108', true 
     'bellaworks-blocks', get_template_directory_uri() . '/assets/js/plugins.min.js', array(), '20220108', true 
   );
 

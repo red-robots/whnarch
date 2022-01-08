@@ -4725,17 +4725,6 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-/**
- * Swiper 7.4.1
- * Most modern mobile touch slider and framework with hardware accelerated transitions
- * https://swiperjs.com
- *
- * Copyright 2014-2021 Vladimir Kharlampidi
- *
- * Released under the MIT License
- *
- * Released on: December 24, 2021
- */
 !function (e, t) {
   "object" == (typeof exports === "undefined" ? "undefined" : _typeof(exports)) && "undefined" != typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define(t) : (e = "undefined" != typeof globalThis ? globalThis : e || self).Swiper = t();
 }(void 0, function () {
@@ -5534,7 +5523,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         c = function c() {
       n = new Date().getTime(), null === l && (l = n);
       var r = Math.max(Math.min((n - l) / o, 1), 0),
-          d = .5 - Math.cos(r * Math.PI) / 2;
+          d = 0.5 - Math.cos(r * Math.PI) / 2;
       var u = i + d * (t - i);
       if (p(u, t) && (u = t), e.wrapperEl.scrollTo(_defineProperty({}, s, u)), p(u, t)) return e.wrapperEl.style.overflow = "hidden", e.wrapperEl.style.scrollSnapType = "", setTimeout(function () {
         e.wrapperEl.style.overflow = "", e.wrapperEl.scrollTo(_defineProperty({}, s, u));
@@ -5967,7 +5956,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     simulateTouch: !0,
     shortSwipes: !0,
     longSwipes: !0,
-    longSwipesRatio: .5,
+    longSwipesRatio: 0.5,
     longSwipesMs: 300,
     followFinger: !0,
     allowTouchMove: !0,
@@ -5978,7 +5967,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     touchReleaseOnEdges: !1,
     uniqueNavElements: !0,
     resistance: !0,
-    resistanceRatio: .85,
+    resistanceRatio: 0.85,
     watchSlidesProgress: !1,
     grabCursor: !1,
     preventClicks: !0,
@@ -6133,7 +6122,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
               _l2 && (_n4[0].style.transform = _l2), _o2 && (_n4[0].style.webkitTransform = _o2), a.roundLengths && ($ = Math.floor($));
             } else $ = (r - (a.slidesPerView - 1) * x) / a.slidesPerView, a.roundLengths && ($ = Math.floor($)), p[_i7] && (p[_i7].style[t("width")] = "".concat($, "px"));
 
-            p[_i7] && (p[_i7].swiperSlideSize = $), m.push($), a.centeredSlides ? (y = y + $ / 2 + E / 2 + x, 0 === E && 0 !== _i7 && (y = y - r / 2 - x), 0 === _i7 && (y = y - r / 2 - x), Math.abs(y) < .001 && (y = 0), a.roundLengths && (y = Math.floor(y)), T % a.slidesPerGroup == 0 && u.push(y), h.push(y)) : (a.roundLengths && (y = Math.floor(y)), (T - Math.min(e.params.slidesPerGroupSkip, T)) % e.params.slidesPerGroup == 0 && u.push(y), h.push(y), y = y + $ + x), e.virtualSize += $ + x, E = $, T += 1;
+            p[_i7] && (p[_i7].swiperSlideSize = $), m.push($), a.centeredSlides ? (y = y + $ / 2 + E / 2 + x, 0 === E && 0 !== _i7 && (y = y - r / 2 - x), 0 === _i7 && (y = y - r / 2 - x), Math.abs(y) < 0.001 && (y = 0), a.roundLengths && (y = Math.floor(y)), T % a.slidesPerGroup == 0 && u.push(y), h.push(y)) : (a.roundLengths && (y = Math.floor(y)), (T - Math.min(e.params.slidesPerGroupSkip, T)) % e.params.slidesPerGroup == 0 && u.push(y), h.push(y), y = y + $ + x), e.virtualSize += $ + x, E = $, T += 1;
           }
         }
 
@@ -6614,7 +6603,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         var e = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.params.speed;
         var t = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : !0;
         var s = arguments.length > 2 ? arguments[2] : undefined;
-        var a = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : .5;
+        var a = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 0.5;
         var i = this;
         var r = i.activeIndex;
         var n = Math.min(i.params.slidesPerGroupSkip, r),
@@ -7816,14 +7805,14 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
                 _a18 = p[0];
 
             if (p.push(_t37), _s35 && (_t37.delta > _s35.delta || _t37.direction !== _s35.direction)) p.splice(0);else if (p.length >= 15 && _t37.time - _a18.time < 500 && _a18.delta - _t37.delta >= 1 && _t37.delta <= 6) {
-              var _s36 = h > 0 ? .8 : .2;
+              var _s36 = h > 0 ? 0.8 : 0.2;
 
               l = _t37, p.splice(0), n = c(function () {
                 e.slideToClosest(e.params.speed, !0, void 0, _s36);
               }, 0);
             }
             n || (n = c(function () {
-              l = _t37, p.splice(0), e.slideToClosest(e.params.speed, !0, void 0, .5);
+              l = _t37, p.splice(0), e.slideToClosest(e.params.speed, !0, void 0, 0.5);
             }, 500));
           }
 
@@ -8487,7 +8476,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         o = !0, u.scaleMove = v(t);
       }
 
-      u.$imageEl && 0 !== u.$imageEl.length ? (s.gestures ? i.scale = t.scale * p : i.scale = u.scaleMove / u.scaleStart * p, i.scale > u.maxRatio && (i.scale = u.maxRatio - 1 + Math.pow(i.scale - u.maxRatio + 1, .5)), i.scale < a.minRatio && (i.scale = a.minRatio + 1 - Math.pow(a.minRatio - i.scale + 1, .5)), u.$imageEl.transform("translate3d(0,0,0) scale(".concat(i.scale, ")"))) : "gesturechange" === t.type && w(t);
+      u.$imageEl && 0 !== u.$imageEl.length ? (s.gestures ? i.scale = t.scale * p : i.scale = u.scaleMove / u.scaleStart * p, i.scale > u.maxRatio && (i.scale = u.maxRatio - 1 + Math.pow(i.scale - u.maxRatio + 1, 0.5)), i.scale < a.minRatio && (i.scale = a.minRatio + 1 - Math.pow(a.minRatio - i.scale + 1, 0.5)), u.$imageEl.transform("translate3d(0,0,0) scale(".concat(i.scale, ")"))) : "gesturechange" === t.type && w(t);
     }
 
     function x(t) {
@@ -8519,7 +8508,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
           if (!e.isHorizontal() && (Math.floor(m.minY) === Math.floor(m.startY) && m.touchesCurrent.y < m.touchesStart.y || Math.floor(m.maxY) === Math.floor(m.startY) && m.touchesCurrent.y > m.touchesStart.y)) return void (m.isTouched = !1);
         }
 
-        t.cancelable && t.preventDefault(), t.stopPropagation(), m.isMoved = !0, m.currentX = m.touchesCurrent.x - m.touchesStart.x + m.startX, m.currentY = m.touchesCurrent.y - m.touchesStart.y + m.startY, m.currentX < m.minX && (m.currentX = m.minX + 1 - Math.pow(m.minX - m.currentX + 1, .8)), m.currentX > m.maxX && (m.currentX = m.maxX - 1 + Math.pow(m.currentX - m.maxX + 1, .8)), m.currentY < m.minY && (m.currentY = m.minY + 1 - Math.pow(m.minY - m.currentY + 1, .8)), m.currentY > m.maxY && (m.currentY = m.maxY - 1 + Math.pow(m.currentY - m.maxY + 1, .8)), f.prevPositionX || (f.prevPositionX = m.touchesCurrent.x), f.prevPositionY || (f.prevPositionY = m.touchesCurrent.y), f.prevTime || (f.prevTime = Date.now()), f.x = (m.touchesCurrent.x - f.prevPositionX) / (Date.now() - f.prevTime) / 2, f.y = (m.touchesCurrent.y - f.prevPositionY) / (Date.now() - f.prevTime) / 2, Math.abs(m.touchesCurrent.x - f.prevPositionX) < 2 && (f.x = 0), Math.abs(m.touchesCurrent.y - f.prevPositionY) < 2 && (f.y = 0), f.prevPositionX = m.touchesCurrent.x, f.prevPositionY = m.touchesCurrent.y, f.prevTime = Date.now(), u.$imageWrapEl.transform("translate3d(".concat(m.currentX, "px, ").concat(m.currentY, "px,0)"));
+        t.cancelable && t.preventDefault(), t.stopPropagation(), m.isMoved = !0, m.currentX = m.touchesCurrent.x - m.touchesStart.x + m.startX, m.currentY = m.touchesCurrent.y - m.touchesStart.y + m.startY, m.currentX < m.minX && (m.currentX = m.minX + 1 - Math.pow(m.minX - m.currentX + 1, 0.8)), m.currentX > m.maxX && (m.currentX = m.maxX - 1 + Math.pow(m.currentX - m.maxX + 1, 0.8)), m.currentY < m.minY && (m.currentY = m.minY + 1 - Math.pow(m.minY - m.currentY + 1, 0.8)), m.currentY > m.maxY && (m.currentY = m.maxY - 1 + Math.pow(m.currentY - m.maxY + 1, 0.8)), f.prevPositionX || (f.prevPositionX = m.touchesCurrent.x), f.prevPositionY || (f.prevPositionY = m.touchesCurrent.y), f.prevTime || (f.prevTime = Date.now()), f.x = (m.touchesCurrent.x - f.prevPositionX) / (Date.now() - f.prevTime) / 2, f.y = (m.touchesCurrent.y - f.prevPositionY) / (Date.now() - f.prevTime) / 2, Math.abs(m.touchesCurrent.x - f.prevPositionX) < 2 && (f.x = 0), Math.abs(m.touchesCurrent.y - f.prevPositionY) < 2 && (f.y = 0), f.prevPositionX = m.touchesCurrent.x, f.prevPositionY = m.touchesCurrent.y, f.prevTime = Date.now(), u.$imageWrapEl.transform("translate3d(".concat(m.currentX, "px, ").concat(m.currentY, "px,0)"));
       }
     }
 
@@ -9399,7 +9388,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         momentumBounceRatio: 1,
         momentumVelocityRatio: 1,
         sticky: !1,
-        minimumVelocity: .02
+        minimumVelocity: 0.02
       }
     }), Object.assign(e, {
       freeMode: {
@@ -9622,7 +9611,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         slideShadows: !0,
         shadow: !0,
         shadowOffset: 20,
-        shadowScale: .94
+        shadowScale: 0.94
       }
     }), F({
       effect: "cube",
@@ -9819,7 +9808,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
               _g2 = n ? _m2 * _l10 : 0,
               _v2 = 1 - (1 - r.scale) * Math.abs(_l10);
 
-          Math.abs(_g2) < .001 && (_g2 = 0), Math.abs(_f3) < .001 && (_f3 = 0), Math.abs(_h3) < .001 && (_h3 = 0), Math.abs(_c4) < .001 && (_c4 = 0), Math.abs(_u5) < .001 && (_u5 = 0), Math.abs(_v2) < .001 && (_v2 = 0);
+          Math.abs(_g2) < 0.001 && (_g2 = 0), Math.abs(_f3) < 0.001 && (_f3 = 0), Math.abs(_h3) < 0.001 && (_h3 = 0), Math.abs(_c4) < 0.001 && (_c4 = 0), Math.abs(_u5) < 0.001 && (_u5 = 0), Math.abs(_v2) < 0.001 && (_v2 = 0);
 
           var _w = "translate3d(".concat(_g2, "px,").concat(_f3, "px,").concat(_h3, "px)  rotateX(").concat(_u5, "deg) rotateY(").concat(_c4, "deg) scale(").concat(_v2, ")");
 
@@ -9996,15 +9985,15 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
           var _f4 = 1,
               _g3 = -2 * _p6,
-              _v3 = 8 - .75 * Math.abs(_p6);
+              _v3 = 8 - 0.75 * Math.abs(_p6);
 
           var _w2 = (_l11 === s || _l11 === s - 1) && _p6 > 0 && _p6 < 1 && (r || e.params.cssMode) && n < i,
               _b = (_l11 === s || _l11 === s + 1) && _p6 < 0 && _p6 > -1 && (r || e.params.cssMode) && n > i;
 
           if (_w2 || _b) {
-            var _e79 = Math.pow(1 - Math.abs((Math.abs(_p6) - .5) / .5), .5);
+            var _e79 = Math.pow(1 - Math.abs((Math.abs(_p6) - 0.5) / 0.5), 0.5);
 
-            _g3 += -28 * _p6 * _e79, _f4 += -.5 * _e79, _v3 += 96 * _e79, _h4 = -25 * _e79 * Math.abs(_p6) + "%";
+            _g3 += -28 * _p6 * _e79, _f4 += -0.5 * _e79, _v3 += 96 * _e79, _h4 = -25 * _e79 * Math.abs(_p6) + "%";
           }
 
           if (_u6 = _p6 < 0 ? "calc(".concat(_u6, "px + (").concat(_v3 * Math.abs(_p6), "%))") : _p6 > 0 ? "calc(".concat(_u6, "px + (-").concat(_v3 * Math.abs(_p6), "%))") : "".concat(_u6, "px"), !e.isHorizontal()) {
@@ -10017,7 +10006,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
           if (a.slideShadows) {
             var _e81 = _o10.find(".swiper-slide-shadow");
 
-            0 === _e81.length && (_e81 = Z(a, _o10)), _e81.length && (_e81[0].style.opacity = Math.min(Math.max((Math.abs(_p6) - .5) / .5, 0), 1));
+            0 === _e81.length && (_e81 = Z(a, _o10)), _e81.length && (_e81[0].style.opacity = Math.min(Math.max((Math.abs(_p6) - 0.5) / 0.5, 0), 1));
           }
 
           _o10[0].style.zIndex = -Math.abs(Math.round(_d8)) + t.length;
