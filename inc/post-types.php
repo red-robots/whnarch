@@ -17,11 +17,11 @@ function js_custom_init() {
         'supports'  => array('title','editor')
       ),
       array(
-        'post_type' => 'services',
-        'menu_name' => 'Services',
-        'plural'    => 'Services',
-        'single'    => 'Service',
-        'menu_icon' => 'dashicons-awards',
+        'post_type' => 'projects',
+        'menu_name' => 'Projects',
+        'plural'    => 'Projects',
+        'single'    => 'Project',
+        'menu_icon' => 'dashicons-building',
         'supports'  => array('title','editor')
       ),
     );
