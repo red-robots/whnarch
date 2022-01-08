@@ -90,15 +90,15 @@ function js_custom_init() {
 add_action( 'init', 'build_taxonomies', 0 ); 
 function build_taxonomies() {
   $post_types  = array();
-  // $post_types = array(
-  //   array(
-  //     'post_type' => array('team','careers'),
-  //     'menu_name' => 'Divisions Taxonomy',
-  //     'plural'    => 'Divisions',
-  //     'single'    => 'Division',
-  //     'taxonomy'  => 'divisions'
-  //   ),
-  // );
+  $post_types = array(
+    array(
+      'post_type' => array('projects'),
+      'menu_name' => 'Project Category',
+      'plural'    => 'Project Categories',
+      'single'    => 'Project Category',
+      'taxonomy'  => 'project-categories'
+    ),
+  );
 
 
   if($post_types) {

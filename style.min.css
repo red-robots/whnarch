@@ -1354,13 +1354,37 @@ a:hover{color:#7ebd42}
 .swiper-button-next,.swiper-button-prev{display:none}
 body.home .site-header{width:100%;position:absolute;top:0;left:0;z-index:100}
 body.home .swiper-slide:before{content:"";display:block;width:100%;height:45%;position:absolute;top:0;left:0;opacity:.5;background:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0.65)),to(rgba(0,0,0,0)));background:linear-gradient(to bottom,rgba(0,0,0,0.65) 0,rgba(0,0,0,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#a6000000",endColorstr="#00000000",GradientType=0)}
-.intro{max-width:700px;width:100%;margin:50px auto}
+body.home .entry-content{width:100%;float:left;margin:50px 0}
+.intro{max-width:700px;width:100%;margin:0 auto}
+.section-title{font-size:14px;font-weight:600;text-transform:uppercase;margin:0;letter-spacing:2px}
+.recent-projects{width:100%;float:left;margin:50px 0}
+.project-columns .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin-left:-15px;margin-right:-15px}
+.project-columns .box{width:100%;padding:15px;position:relative}
+.project-columns .box a,.project-columns .box a *{-webkit-transition:all ease .5s;transition:all ease .5s}
+.project-columns .box a{display:block;width:100%;float:left;position:relative}
+.project-columns .box img{width:100%;height:auto;float:left}
+.project-columns .box span.image{display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:5;background-size:cover;background-position:center;background-repeat:no-repeat}
+.project-columns .box span.view{display:block;width:100%;height:100%;position:absolute;top:0;left:0;background:rgba(0,0,0,.6);z-index:10;text-align:center;opacity:0}
+.project-columns .box span.view span.plus{display:inline-block;width:30px;height:30px;background:#ed3742;color:#fff;font-size:13px;line-height:1;text-align:center;position:relative;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%)}
+.project-columns .box span.view span.plus:before,.project-columns .box span.view span.plus:after{content:"";width:34%;height:1px;background:#fff;position:absolute;top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%)}
+.project-columns .box span.view span.plus:before{left:50%;-webkit-transform:translateX(-50%) translateY(-50%) rotate(90deg);transform:translateX(-50%) translateY(-50%) rotate(90deg)}
+.project-columns .box a:hover span.view{opacity:1}
+div.more-button{text-align:right}
+div.more-button a.more{display:inline-block;text-decoration:none;color:#000;font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:2px;position:relative;right:3px}
+div.more-button a.more .arrow{display:inline-block;width:45px;height:1px;background:#000;position:relative;top:-4px;margin-left:5px;-webkit-transition:all ease .3s;transition:all ease .3s}
+div.more-button a.more .arrow:before,div.more-button a.more .arrow:after{content:"";width:9px;height:1px;background:#000;position:absolute;top:0;right:-1px}
+div.more-button a.more .arrow:before{-webkit-transform:translateY(-3px) rotate(45deg);transform:translateY(-3px) rotate(45deg)}
+div.more-button a.more .arrow:after{-webkit-transform:translateY(3px) rotate(-45deg);transform:translateY(3px) rotate(-45deg)}
+div.more-button a.more:hover{color:#ed3742}
+div.more-button a.more:hover .arrow{background:#ed3742;-webkit-transform:translateX(5px);transform:translateX(5px)}
+div.more-button a.more:hover .arrow:before,div.more-button a.more:hover .arrow:after{background:#ed3742}
 @media(min-width:820px){.wrapper.wide{max-width:90%}
 #site-logo{width:20%;min-height:90px}
 #site-logo span.logo{width:80px}
 #site-navigation #primary-menu{right:-15px}
 .slideCaption .wrap{width:95%;margin:0 auto}
 .slideCaption .wrap .text{width:65vw}
+.project-columns .box{width:33.33%}
 }@media(print),(prefers-reduced-motion:reduce){.animated{-webkit-animation-duration:1ms !important;animation-duration:1ms !important;-webkit-transition-duration:1ms !important;transition-duration:1ms !important;-webkit-animation-iteration-count:1 !important;animation-iteration-count:1 !important}
 }@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}
 100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
