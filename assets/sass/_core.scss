@@ -29,8 +29,8 @@ pre {
 }
 body {
 	font-family: $font_primary;
-	font-size: 18px;
-	font-weight: 300;
+	font-size: 16px;
+	font-weight: 400;
 	line-height: 1.5;
 	color: $color_text_main;
 }
@@ -86,6 +86,7 @@ a {
 		z-index: 100000; /* Above WP toolbar. */
 	}
 }
+.text-center {text-align:center;}
 .flexwrap {
 	position: relative;
 	@include flexgroup();
@@ -331,4 +332,10 @@ body.home {
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
     }
   }
+}
+
+.intro {
+  max-width: 700px;
+  width: 100%;
+  margin: 50px auto;
 }
