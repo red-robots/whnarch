@@ -13,6 +13,3 @@ Upgrading to Node version 17 is NOT recommended. Otherwise, some packages may no
 * npm: 8.1.2
 * npx: 8.1.2
 * gulp: 4.0.2
-
-## Good luck!
-
