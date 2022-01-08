@@ -6,7 +6,7 @@ WHN Architects v1.0
 
 
 #### WARNING!!!
-Upgrading to Node version 17 is NOT recommended. Otherwise, some packages may not work.
+Upgrading to Node v17 is NOT recommended. Otherwise, some packages may not work.
 
 ### Recommended Versions 
 * node: v16.13.1
