@@ -321,12 +321,13 @@ h3 {font-size:16px;text-transform:uppercase;}
     #primary-menu  {
       display: block;
       width: 100%;
-      margin-top: 150px;
+      margin-top: 135px;
       padding-top: 0;
       padding-bottom: 50px;
       padding-left: 0;
       padding-right: 0;
       background: #000;
+      border-top: 1px solid rgba(255,255,255,.15);
       a {
         color: #FFF!important;
       }
@@ -891,7 +892,7 @@ body.subpage {
         top: 105px;
       }
       #site-navigation #primary-menu {
-        margin-top: 190px;
+        margin-top: 180px;
       }
     }
   }

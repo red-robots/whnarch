@@ -1487,7 +1487,7 @@ body.subpage #main{min-height:30em}
 }@media screen and (max-width:960px){.mobile-menu{display:block}
 #site-navigation{display:none;position:fixed;top:0;right:0;max-width:100%;width:100%;height:0;overflow:auto;-webkit-transition:all ease .3s;transition:all ease .3s;-webkit-animation-duration:.5s;animation-duration:.5s}
 #site-navigation .main-menu-wrap{width:100%;height:100%;color:#fff}
-#site-navigation #primary-menu{display:block;width:100%;margin-top:150px;padding-top:0;padding-bottom:50px;padding-left:0;padding-right:0;background:#000}
+#site-navigation #primary-menu{display:block;width:100%;margin-top:135px;padding-top:0;padding-bottom:50px;padding-left:0;padding-right:0;background:#000;border-top:1px solid rgba(255,255,255,.15)}
 #site-navigation #primary-menu a{color:#fff !important}
 #site-navigation #primary-menu>li{display:block;width:100%;border-bottom:1px solid rgba(255,255,255,.15)}
 #site-navigation #primary-menu>li>a{padding:14px 28px;font-size:16px;opacity:0;position:relative}
@@ -1514,7 +1514,7 @@ body.mobile-menu-open .mobile-menu{top:65px;right:25px;z-index:60}
 body.mobile-menu-open.subpage .mobile-menu span.bar,body.mobile-menu-open.subpage .mobile-menu span.bar:before,body.mobile-menu-open.subpage .mobile-menu span.bar:after{background:#fff}
 body.mobile-menu-open.logged-in.admin-bar #site-logo{top:76px}
 body.mobile-menu-open.logged-in.admin-bar .mobile-menu{top:105px}
-body.mobile-menu-open.logged-in.admin-bar #site-navigation #primary-menu{margin-top:190px}
+body.mobile-menu-open.logged-in.admin-bar #site-navigation #primary-menu{margin-top:180px}
 }@media(print),(prefers-reduced-motion:reduce){.animated{-webkit-animation-duration:1ms !important;animation-duration:1ms !important;-webkit-transition-duration:1ms !important;transition-duration:1ms !important;-webkit-animation-iteration-count:1 !important;animation-iteration-count:1 !important}
 }@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}
 100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
