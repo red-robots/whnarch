@@ -43,15 +43,15 @@ get_header(); ?>
     );
     $projects = new WP_Query($args);
     if ( $projects->have_posts() ) {  ?> 
-    <div class="images-columns">
-      <div class="inner">
+    <div class="project-columns">
+      <div class="flexwrap">
       <?php $i=1; while ( $projects->have_posts() ) : $projects->the_post(); ?>
         <?php  
           $pagelink = get_permalink();
           $thumbnail = get_field("thumbnail");
           $has_image = ($thumbnail) ? 'has-thumbnail':'no-thumbnail';
         ?>
-        <div class="block">
+        <div class="box">
           <a href="<?php echo $pagelink ?>" class="link <?php echo $has_image ?>">
             <?php if ($thumbnail) { ?>
             <span class="image" style="background-image:url('<?php echo $thumbnail['url'] ?>')"></span> 

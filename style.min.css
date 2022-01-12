@@ -1466,11 +1466,6 @@ body.subpage #main{min-height:30em}
 .content-area.parent-page .categories a{display:inline-block;text-decoration:none;color:#000;font-size:14px;font-weight:600;text-transform:uppercase;margin:0;letter-spacing:1px;margin-right:20px;margin-bottom:8px}
 .content-area.parent-page .categories a:hover{color:#ed3742}
 .content-area.parent-page .categories a:last-child{margin-right:0}
-.images-columns .inner{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin:0 -10px}
-.images-columns .block{width:100%;padding:10px}
-.images-columns .block a{overflow:hidden}
-.images-columns .block a,.images-columns .block img{display:block;width:100%;height:auto;float:left;position:relative}
-.images-columns .block span.image{display:block;width:100%;height:100%;background-size:cover;background-position:center;background-repeat:no-repeat;position:absolute;top:0;left:0;z-index:5}
 .site-footer{color:#fff;width:100%;float:left;background-image:url("images/tagline.png");background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#141414}
 .site-footer .footer-contact{text-align:center;padding:60px 0}
 .site-footer .footer-contact .t1{font-size:15px;font-weight:600;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px}
@@ -1489,8 +1484,6 @@ body.subpage #main{min-height:30em}
 .slideCaption .wrap{width:95%;margin:0 auto}
 .slideCaption .wrap .text{width:65vw}
 .project-columns .box{width:33.33%}
-.images-columns .block{width:50%}
-}@media(min-width:960px){.images-columns .block{width:33.33%}
 }@media screen and (max-width:960px){.mobile-menu{display:block}
 #site-navigation{display:none;position:fixed;top:0;right:0;max-width:100%;width:100%;height:0;overflow:auto;-webkit-transition:all ease .3s;transition:all ease .3s;-webkit-animation-duration:.5s;animation-duration:.5s}
 #site-navigation .main-menu-wrap{width:100%;height:100%;color:#fff}
