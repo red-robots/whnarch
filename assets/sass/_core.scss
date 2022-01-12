@@ -693,6 +693,21 @@ body.home {
       width: 33.33%;
     }
   }
+  .project-name {
+    display: block;
+    width: 100%;
+    float: left;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 10px 0 0;
+    a {
+      color: #000;
+      text-decoration: none;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
 }
 
 div.more-button {

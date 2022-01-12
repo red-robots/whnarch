@@ -1452,6 +1452,9 @@ body.home .entry-content{width:100%;float:left;margin:50px 0}
 .project-columns .box span.view span.plus:before,.project-columns .box span.view span.plus:after{content:"";width:34%;height:1px;background:#fff;position:absolute;top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%)}
 .project-columns .box span.view span.plus:before{left:50%;-webkit-transform:translateX(-50%) translateY(-50%) rotate(90deg);transform:translateX(-50%) translateY(-50%) rotate(90deg)}
 .project-columns .box a:hover span.view{opacity:1}
+.project-columns .project-name{display:block;width:100%;float:left;font-size:15px;font-weight:500;margin:10px 0 0}
+.project-columns .project-name a{color:#000;text-decoration:none}
+.project-columns .project-name a:hover{color:#ed3742}
 div.more-button{text-align:right}
 div.more-button a.more{display:inline-block;text-decoration:none;color:#000;font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:2px;position:relative;right:3px}
 div.more-button a.more .arrow{display:inline-block;width:45px;height:1px;background:#000;position:relative;top:-4px;margin-left:5px;-webkit-transition:all ease .3s;transition:all ease .3s}

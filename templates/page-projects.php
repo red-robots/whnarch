@@ -59,6 +59,7 @@ get_header(); ?>
             <img src="<?php echo $placeholder ?>" alt="" aria-hidden="true">
             <span class="view"><span class="plus"></span></span>
           </a>
+          <p class="project-name"><a href="<?php echo $pagelink ?>"><?php the_title(); ?></a></p>
         </div>
       <?php $i++; endwhile; wp_reset_postdata(); ?>
       </div>
