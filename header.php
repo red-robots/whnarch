@@ -44,7 +44,7 @@ $extraClass = (get_field("banners")) ? 'has-banner':'';
 	<header id="masthead" class="site-header" role="banner">
 		<div class="wrapper">
       <div class="flexwrap">
-  			<div id="site-logo">
+  			<div id="site-logo" class="animated fadeIn">
 				  <?php if( get_custom_logo() ) { ?>
             <span class="logo">
               <?php the_custom_logo(); ?>
@@ -55,10 +55,10 @@ $extraClass = (get_field("banners")) ? 'has-banner':'';
   			</div>
 
 
-        <nav id="site-navigation" class="main-navigation animated fadeIn" role="navigation">
+        <nav id="site-navigation" class="main-navigation animated" role="navigation">
           <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container_class'=>'main-menu-wrap', 'menu_id' => 'primary-menu','link_before'=>'<span>','link_after'=>'</span>',) ); ?>
         </nav>
-        <a class="mobile-menu" id="menutoggle" href="#mobile-menu"><span class="bar"></span><i>Menu</i></a>
+        <span class="mobile-menu" id="menutoggle"><span class="bar"></span><i>Menu</i></span>
   		</div>
     </div>	
 	</header>

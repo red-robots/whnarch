@@ -28,7 +28,7 @@ if( is_front_page() || is_home() ) { ?>
         <div class="swiper-button-prev"></div>
       <?php } ?>
     </div>
-    <div class="bottom-middle-line"><span></span></div>
+    <div class="bottom-middle-line"><span class="animated fadeInUp"></span></div>
   </div>
   <?php } ?>
 <?php } ?>

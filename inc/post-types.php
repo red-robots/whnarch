@@ -213,3 +213,45 @@ function custom_post_column( $column, $post_id ) {
     
 }
 
+/* Remove Description column from Category table */
+add_filter('manage_edit-project-categories_columns', function ( $columns ) {
+  if( isset( $columns['description'] ) )
+    unset( $columns['description'] );   
+  return $columns;
+});
+
+
+function project_categories_custom_columns( $columns ) {
+    unset($columns['slug']);
+    unset($columns['posts']);
+    $columns['cat_image'] = __( 'Image', 'bellaworks' );
+    $columns['slug'] = __( 'Slug', 'bellaworks' );
+    $columns['posts'] = __( 'Count', 'bellaworks' );
+    return $columns;
+}
+add_filter( 'manage_edit-project-categories_columns', 'project_categories_custom_columns' );
+
+function project_cats_column_content($content,$column_name,$term_id){
+    $taxonomy = 'project-categories';
+    $term= get_term($term_id, $taxonomy);
+    switch ($column_name) {
+        case 'cat_image':
+                $img = get_field('cat_featured_image',$taxonomy.'_'.$term_id);
+                $img_src = ($img) ? $img['sizes']['thumbnail'] : '';
+                $content = '<span class="tmphoto" style="display:inline-block;width:50px;height:50px;background:#e2e1e1;text-align:center;border:1px solid #CCC;overflow:hidden;">';
+                if($img_src) {
+                   $content .= '<span style="display:block;width:100%;height:100%;background:url('.$img_src.') top center no-repeat;background-size:cover;transform:scale(1.2)"></span>';
+                } else {
+                    $content .= '<i class="dashicons dashicons-format-image" style="font-size:25px;position:relative;top:13px;left: -3px;opacity:0.3;"></i>';
+                }
+                $content .= '</span>';
+            break;
+        default:
+            break;
+    }
+    return $content;
+}
+add_filter('manage_project-categories_custom_column', 'project_cats_column_content',10,3);
+
+
+
