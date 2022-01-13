@@ -34,6 +34,7 @@
 	</footer><!-- #colophon -->
 	
 </div><!-- #page -->
+<div id="loaderdiv"><div class="loader"><span class="loadtxt">Loading...</span></div></div>
 <?php wp_footer(); ?>
 </body>
 </html>

@@ -4,7 +4,7 @@
  *
  */
 get_header(); ?>
-<div id="primary" class="content-area default-template parent-page">
+<div id="primary" class="content-area default-template projects-page parent-page">
 	<main id="main" class="site-main wrapper">
 		<?php while ( have_posts() ) : the_post(); ?>
       <header class="entry-title" style="display:none"><h1 class="page-title"><?php the_title(); ?></h1></header>
@@ -15,53 +15,33 @@ get_header(); ?>
 
     <?php  
     $current_page = get_permalink();
-    $taxonomy = 'project-categories';
-    $terms = get_terms( $taxonomy, array( 'hide_empty' => true, 'parent' => 0 ) );
-    if($terms) { ?>
-
-      <div class="categories">
-        <a href="<?php echo $current_page ?>">All</a>
-        <?php foreach ($terms as $term) { 
-          $term_link = get_term_link($term, $taxonomy);
-          $term_name = $term->name;
-          ?>
-          <a href="<?php echo $term_link ?>"><?php echo $term_name ?></a>
-        <?php } ?>
-      </div>
-
-    <?php } ?>
-
-    <?php
+    $isAll = true;
+    include( locate_template('parts/project-categories-breadcrumb.php') );
     $placeholder = THEMEURI . 'images/rectangle-lg.png';
     $paged = ( get_query_var( 'pg' ) ) ? absint( get_query_var( 'pg' ) ) : 1;
-    $postype = 'projects';
+    $posttype = 'projects';
+    $perpage = (get_field("projects_perpage","option")) ? get_field("projects_perpage","option") : 9;
     $args = array(
-      'posts_per_page'=> 9,
-      'post_type'   => $postype,
-      'post_status' => 'publish',
-      'paged'     => $paged
+      'posts_per_page'=> $perpage,
+      'post_type'   => $posttype,
+      'post_status' => 'publish'
     );
     $projects = new WP_Query($args);
-    if ( $projects->have_posts() ) {  ?> 
-    <div class="project-columns">
-      <div class="flexwrap">
-      <?php $i=1; while ( $projects->have_posts() ) : $projects->the_post(); ?>
-        <?php  
-          $pagelink = get_permalink();
-          $thumbnail = get_field("thumbnail");
-          $has_image = ($thumbnail) ? 'has-thumbnail':'no-thumbnail';
-        ?>
-        <div class="box">
-          <a href="<?php echo $pagelink ?>" class="link <?php echo $has_image ?>">
-            <?php if ($thumbnail) { ?>
-            <span class="image" style="background-image:url('<?php echo $thumbnail['url'] ?>')"></span> 
-            <?php } ?>
-            <img src="<?php echo $placeholder ?>" alt="" aria-hidden="true">
-            <span class="view"><span class="plus"></span></span>
-          </a>
-          <p class="project-name"><a href="<?php echo $pagelink ?>"><?php the_title(); ?></a></p>
+    if ( $projects->have_posts() ) {  ?>
+    <div id="projectList">
+      <div class="project-columns">
+        <div class="flexwrap">
+        <?php echo get_posttype_listing($posttype,$paged,$perpage,null); ?>
         </div>
-      <?php $i++; endwhile; wp_reset_postdata(); ?>
+        <?php  
+        $total_pages = $projects->max_num_pages;
+        $totalpost = $projects->found_posts; 
+        if ($total_pages > 1){ ?>
+        <div class="loadmore">
+          <span class="moretxt">Load More</span>
+          <a href="javascript:void(0)" id="loadMoreBtn" data-pg="<?php echo $paged+1 ?>" data-perpage="<?php echo $perpage ?>" data-posttype="<?php echo $posttype ?>" data-total="<?php echo $total_pages ?>" class="plusBtn"><span></span></a>
+        </div>
+        <?php } ?>
       </div>
     </div>
     <?php } ?>

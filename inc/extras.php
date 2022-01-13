@@ -333,22 +333,88 @@ function get_excerpt($text,$limit=100) {
 }   
 
 
-/* Update Peope post type */
-// if( (isset($_GET['post_type']) && $_GET['post_type']=='team') && (isset($_GET['do']) && $_GET['do']=='update') ) {
-//   $args = array(
-//     'posts_per_page'   => -1,
-//     'post_type'        => 'people',
-//     'post_status'      => 'publish'
-//   );
-//   $team = get_posts($args);
-//   if($team) {
-//     foreach($team as $p) {
-//       $pid = $p->ID;
-//       $p->post_type="team";
-//       wp_update_post($p);
-//     }
-//   }
-// }
+/* Get Faculty Details via Ajax */
+add_action( 'wp_ajax_nopriv_get_posttype_content', 'get_posttype_content' );
+add_action( 'wp_ajax_get_posttype_content', 'get_posttype_content' );
+function get_posttype_content() {
+    if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+        $perpage = ($_POST['perpage']) ? $_POST['perpage'] : 9;
+        $paged = ($_POST['pg']) ? $_POST['pg'] : 1;
+        $posttype = ($_POST['posttype']) ? $_POST['posttype'] : '';
+        $taxonomy = ( isset($_POST['taxonomy']) ) ? $_POST['taxonomy'] : '';
+        $term_id = ( isset($_POST['term_id']) ) ? $_POST['term_id'] : '';
+        $tax = array();
+        if($term_id) {
+          $tax['taxonomy'] = $taxonomy;
+          $tax['term_id'] = $term_id;
+        }
+        $html = get_posttype_listing($posttype,$paged,$perpage,$tax);
+        $response['content'] = $html;
+        echo json_encode($response);
+    }
+    else {
+        header("Location: ".$_SERVER["HTTP_REFERER"]);
+    }
+    die();
+}
+
+function get_posttype_listing($posttype,$paged,$perpage,$tax=null) {
+  $result = '';
+  $placeholder = THEMEURI . 'images/rectangle-lg.png';
+  $args = array(
+    'posts_per_page'=> $perpage,
+    'post_type'   => $posttype,
+    'post_status' => 'publish',
+    'paged'     => $paged
+  );
+  if($tax) {
+    $taxonomy = $tax['taxonomy'];
+    $current_term_id = $tax['term_id'];
+    $args['tax_query'] = array(
+      array(
+        'taxonomy'  => $taxonomy,
+        'field'     => 'term_id',
+        'terms'     => array( $current_term_id ),
+      )
+    );
+  }
+  $projects = new WP_Query($args);
+  if ( $projects->have_posts() ) { 
+    ob_start();
+    
+    while ( $projects->have_posts() ) : $projects->the_post(); 
+    $pagelink = get_permalink();
+    $thumbnail = get_field("thumbnail");
+    $has_image = ($thumbnail) ? 'has-thumbnail':'no-thumbnail';
+    $animation = 'animated fadeIn';
+    include( locate_template('parts/project-item.php') );
+    endwhile; wp_reset_postdata();
+
+    $result = ob_get_contents();
+    ob_end_clean(); 
+  }
+  
+  return $result;
+}
+
+
+if ( ! function_exists( 'theme_content_navigation' ) ) {
+    function theme_content_navigation( ) {
+        global $wp_query;
+
+        if ( $wp_query->max_num_pages > 1 ) { ?>
+            <nav class="navigation" role="navigation">
+                <div class="nav-previous"><?php next_posts_link( 'next' ); ?></div>
+                <div class="nav-next"><?php previous_posts_link( 'prev' ); ?></div>
+            </nav>
+        <?php 
+        }
+    }
+}
+add_action('wp_footer', 'theme_content_navigation');
+
+
+
 
 
 
