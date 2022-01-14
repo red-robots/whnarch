@@ -5,31 +5,9 @@
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-      <?php $galleries = get_field('galleries'); ?>
-      <?php if ($galleries) { $count = count($galleries); ?>
-        <div class="carousel-container">
-          <div id="slick-carousel" class="carousel-inner">
-            <?php $j=1; foreach ($galleries as $img) { ?>
-              <div class="slick-slide swipeImg<?php echo ($j==1) ? ' slick-current slick-active slick-center':''?>">
-                <div class="slick-inner">
-                  <div class="imagediv" style="background-image:url('<?php echo $img['url']; ?>')"></div>
-                  <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['title']; ?>" />
-                </div>
-              </div>
-            <?php $j++; } ?>
-          </div>
-          <?php if ($count>1) { ?>
-          <div class="custom-slick-arrow">
-            <div class="wrap">
-              <a href="javascript:void(0)" class="custom-slick-nav" data-slickbtn=".slick-prev" id="custom-slick-prev"><span>Previous</span></a>
-              <a href="javascript:void(0)" class="custom-slick-nav" data-slickbtn=".slick-next" id="custom-slick-next"><span>Next</span></a>
-            </div>
-          </div>
-          <?php } ?>
-        </div>
-      <?php } ?>
+      <?php include( locate_template('parts/carousel-slide.php') ); ?>
 
-      <div class="single-page-content <?php echo ($galleries) ? 'hasGalleries':'NoGalleries'; ?>">
+      <div class="single-page-content <?php echo (isset($galleries) && $galleries) ? 'hasGalleries':'NoGalleries'; ?>">
         <div class="wrapper">
           <header class="entry-title"><h1><?php the_title(); ?></h1></header>
 

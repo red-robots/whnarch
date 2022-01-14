@@ -122,10 +122,13 @@ h3 {font-size:16px;text-transform:uppercase;}
 }
 
 #site-logo {
-  width: 70px;
+  width: 55px;
   position: relative;
   z-index: 50;
+  @include flexgroup();
+  @include flexbox-align-items(center);
   @include tab {
+    width: 70px;
     width: 20%;
     min-height: 90px;
   }
@@ -137,7 +140,7 @@ h3 {font-size:16px;text-transform:uppercase;}
     @include flexbox-align-items(center);
   }
   span.logo {
-    display: inline-block;
+    display: block;
     width: 100%;
     @include tab {
       width: 80px;
@@ -150,10 +153,14 @@ h3 {font-size:16px;text-transform:uppercase;}
   }
 }
 .site-header {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   position: relative;
   z-index: 100;
+  @include tab {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
   .wrapper {
     max-width: 95%;
   }
@@ -166,10 +173,10 @@ h3 {font-size:16px;text-transform:uppercase;}
 .mobile-menu {
   display: none;
   position: absolute;
+  top: 13px;
   right: 0;
   width: 32px;
   height: 32px;
-  margin-top: -20px;
   cursor: pointer;
   i {
     display: none;
@@ -321,7 +328,7 @@ h3 {font-size:16px;text-transform:uppercase;}
     #primary-menu  {
       display: block;
       width: 100%;
-      margin-top: 135px;
+      margin-top: 90px;
       padding-top: 0;
       padding-bottom: 50px;
       padding-left: 0;
@@ -940,39 +947,64 @@ body.subpage {
   margin-bottom: 18px;
   position: relative;
   width: 100%;
-  height: 400px;
-  @include mid {
-    height: 600px;
+  float: left;
+  // height: 400px;
+  // @include mid {
+  //   height: 600px;
+  // }
+  // @include desk {
+  //   height: 700px;
+  // }
+  * {
+    box-sizing: border-box;
   }
-  @include desk {
-    height: 700px;
-  }
-  .carousel-inner {
-    height: 100%;
-  }
-  .slick-dotted.slick-slider,
-  .slick-list, .slick-track {
-    height: 100%;
-    width: 100%;
-    @media screen and (min-width: $tabwidth) {
-      width: auto;
+  img.resizer {
+    display: block;
+    width: auto;
+    margin: 0 auto;
+    position: relative;
+    height: 400px;
+    @include mid {
+      height: 600px;
+    }
+    @include desk {
+      height: 700px;
     }
   }
+
+  .carousel-inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    overflow: hidden;
+  }
+  .slick-list, .slick-track {
+    height: 100%;
+  }
+  // .slick-track, .slick-slide, .slick-inner {
+  //   height: 100%;
+  // }
+  // .slick-dotted.slick-slider,
+  // .slick-list, .slick-track {
+  //   height: 100%;
+  //   width: 100%;
+  // }
   .slick-dotted.slick-slider {
     margin-bottom: 0;
   }
   .slick-slide {
-    box-sizing: border-box;
-    // border-left: 4px solid #FFF;
-    // border-right: 4px solid #FFF;
+    height: 100%;
     padding: 0 4px;
     position: relative;
     cursor: grab;
     background-color: #FFF;
-    @media screen and (min-width: $tabwidth) {
-      height: 100%;
-      overflow: hidden;
-    }
+    // @media screen and (min-width: $tabwidth) {
+    //   height: 100%;
+    //   overflow: hidden;
+    // }
     &:focus {
       border: none;
       outline: none;
@@ -989,7 +1021,8 @@ body.subpage {
       float: left;
       visibility: hidden;
     }
-    .imagediv {
+    .image-cover {
+      margin:0 0;
       display: block;
       width: 100%;
       height: 100%;
@@ -1010,13 +1043,13 @@ body.subpage {
       //   border: 1px solid #eaeaea;
       // }
     }
-    img, .imagediv {
+    img, .image-cover {
       opacity: 0.4;
       @include transition(all ease-out .3s);
     }
   }
   .slick-slide.slick-active {
-    img, .imagediv {
+    img, .image-cover {
       opacity: 1;
     }
   }
@@ -1117,6 +1150,7 @@ body.subpage {
   left: 0;
   bottom: -18px;
   width: 100%;
+  z-index: 30;
   .wrap {
     max-width: 840px;
     width: 100%;
@@ -1420,7 +1454,7 @@ body.single-projects  {
           content: "";
           display: block;
           width: 100vw;
-          height: 120px;
+          height: 90px;
           background: black;
           position: fixed;
           top: 0;
@@ -1433,10 +1467,10 @@ body.single-projects  {
       position: fixed;
     }
     #site-logo {
-      top: 30px;
+      top: 15px;
     }
     .mobile-menu {
-      top: 65px;
+      top: 28px;
       right: 25px;
       z-index: 60;
     }

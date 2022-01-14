@@ -63,6 +63,15 @@ jQuery(document).ready(function ($) {
     centerMode: true,
     variableWidth: true
   });
+  $(document).on("click", "#slick-carousel .slick-slide", function (e) {
+    e.preventDefault();
+
+    if ($(this).prev().hasClass('slick-current')) {
+      $("button.slick-next").trigger("click");
+    } else if ($(this).next().hasClass('slick-current')) {
+      $("button.slick-prev").trigger("click");
+    }
+  });
   $(".custom-slick-nav").on("click", function (e) {
     e.preventDefault();
     var slickBtn = $(this).attr("data-slickbtn");
