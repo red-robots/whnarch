@@ -1646,6 +1646,105 @@ body.single-projects  {
   }
 }
 
+.red-heading {
+  color: $primary;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+.teamList {
+  margin-top: 40px;
+  @include tab {
+    margin-top: 60px;
+  }
+  .group {
+    padding-bottom: 40px;
+    margin-bottom: 80px;
+    border-bottom: 1px solid #000;
+  }
+  .group:last-child {
+    border-bottom: none;
+  }
+  .entries {
+    @include flexgroup();
+    @include flexbox-justify(center);
+    .info {
+      width: 100%;
+      padding: 15px;
+      text-align: center;
+      margin-bottom: 10px;
+      @include xs {
+        width: 50%;
+      }
+      @include tab {
+        width: 33.33%;
+      }
+    }
+    .team-name {
+      padding: 0px 10px 15px;
+    }
+    .pagelink {
+      display: block;
+      text-decoration: none;
+      width: 100%;
+      float: left;
+      color: #000;
+      position: relative;
+      .photo {
+        display: block;
+        margin: 0 0;
+        width: 100%;
+        @include backgroundImage(center);
+        background-color: #ebebeb;
+        margin-bottom: 10px;
+        position: relative;
+        &.no:before {
+          content:"Photo Coming Soon";
+          display: block;
+          width: 100%;
+          text-align: center;
+          color: #b1b1b1;
+          font-size: 12px;
+          font-weight: 500;
+          line-height:1.1;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+      span {
+        display: block;
+        width: 100%;
+        &.name {
+          font-weight: 400;
+          font-size: 17px;
+        }
+        &.jobtitle {
+          font-size: 11px;
+          font-weight: 600;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+        } 
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+      &:hover {
+        box-shadow: 0 0 18px rgba(0,0,0,0.2);
+        transform: translateY(-8px);
+      }
+    }
+  }
+}
+
 /* FOOTER */
 .site-footer {
   color: #FFF;

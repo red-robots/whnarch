@@ -98,6 +98,13 @@ function build_taxonomies() {
       'single'    => 'Project Category',
       'taxonomy'  => 'project-categories'
     ),
+    array(
+      'post_type' => array('team'),
+      'menu_name' => 'Groups',
+      'plural'    => 'Groups',
+      'single'    => 'Group',
+      'taxonomy'  => 'team-group'
+    ),
   );
 
 

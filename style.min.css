@@ -1648,6 +1648,21 @@ body.single-projects .post-type-navigation{width:100%;position:absolute;left:0;b
 .form-wrapper .contact-form a.submit-button:hover{background:#ed3742}
 .form-wrapper .contact-form a.submit-button:hover i.arrow{-webkit-transform:translateY(-50%) translateX(5px);transform:translateY(-50%) translateX(5px)}
 .form-wrapper .contact-form .custom-button{width:100%;position:absolute;bottom:-54px;left:0;text-align:center}
+.red-heading{color:#ed3742;font-size:15px;font-weight:600;line-height:1.1;text-transform:uppercase;letter-spacing:2px;margin:0 0 20px;text-align:center}
+.teamList{margin-top:40px}
+.teamList .group{padding-bottom:40px;margin-bottom:80px;border-bottom:1px solid #000}
+.teamList .group:last-child{border-bottom:0}
+.teamList .entries{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+.teamList .entries .info{width:100%;padding:15px;text-align:center;margin-bottom:10px}
+.teamList .entries .team-name{padding:0 10px 15px}
+.teamList .entries .pagelink{display:block;text-decoration:none;width:100%;float:left;color:#000;position:relative}
+.teamList .entries .pagelink .photo{display:block;margin:0;width:100%;background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#ebebeb;margin-bottom:10px;position:relative}
+.teamList .entries .pagelink .photo.no:before{content:"Photo Coming Soon";display:block;width:100%;text-align:center;color:#b1b1b1;font-size:12px;font-weight:500;line-height:1.1;text-transform:uppercase;letter-spacing:2px;position:absolute;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%)}
+.teamList .entries .pagelink span{display:block;width:100%}
+.teamList .entries .pagelink span.name{font-weight:400;font-size:17px}
+.teamList .entries .pagelink span.jobtitle{font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.teamList .entries .pagelink img{width:100%;height:auto}
+.teamList .entries .pagelink:hover{-webkit-box-shadow:0 0 18px rgba(0,0,0,.2);box-shadow:0 0 18px rgba(0,0,0,.2);-webkit-transform:translateY(-8px);transform:translateY(-8px)}
 .site-footer{color:#fff;width:100%;float:left;background-image:url("images/tagline.png");background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#141414}
 .site-footer .footer-contact{text-align:center;padding:60px 0}
 .site-footer .footer-contact .t1{font-size:15px;font-weight:600;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px}
@@ -1664,6 +1679,7 @@ body.single-projects .post-type-navigation{width:100%;position:absolute;left:0;b
 .loader{display:inline-block;font-size:10px;text-indent:-9999em;border-top:1.1em solid rgba(0,0,0,.15);border-right:1.1em solid rgba(0,0,0,.15);border-bottom:1.1em solid rgba(0,0,0,.15);border-left:1.1em solid #ed3742;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-animation:load8 1.1s infinite linear;animation:load8 1.1s infinite linear;position:relative;top:40%;-webkit-transform:translateY(-40%);transform:translateY(-40%)}
 @media only screen and (-webkit-min-device-pixel-ratio:1.5),only screen and (min--moz-device-pixel-ratio:1.5),only screen and (min-device-pixel-ratio:1.5){#fancybox-loading,.fancybox-close,.fancybox-next span,.fancybox-prev span{background-image:url(../images/fancybox/fancybox_sprite@2x.png);background-size:44px 152px}
 #fancybox-loading div{background-image:url(../images/fancybox/fancybox_loading@2x.gif);background-size:24px 24px}
+}@media(min-width:600px){.teamList .entries .info{width:50%}
 }@media(min-width:820px){.wrapper.wide{max-width:90%}
 #site-logo{width:70px;width:20%;min-height:90px}
 #site-logo span.logo{width:80px}
@@ -1686,6 +1702,8 @@ body.single-projects .post-type-navigation{width:100%;position:absolute;left:0;b
 .form-wrapper .contact-form a.submit-button span{left:-22px}
 .form-wrapper .contact-form a.submit-button i.arrow{right:20px}
 .form-wrapper .contact-form .custom-button{text-align:right}
+.teamList{margin-top:60px}
+.teamList .entries .info{width:33.33%}
 }@media(min-width:960px){.project-full-info .infocol.left{width:30%}
 .project-full-info .infocol.right{width:70%}
 .carousel-container img.resizer{height:600px}
