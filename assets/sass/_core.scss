@@ -979,6 +979,7 @@ body.subpage {
     top: 0;
     left: 0;
     z-index: 5;
+    background-color: #e7e7e7;
     overflow: hidden;
   }
   .slick-list, .slick-track {
@@ -1372,6 +1373,276 @@ body.single-projects  {
     position: absolute;
     left: 0;
     bottom: 0;
+  }
+}
+
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  float: left;
+  background:#CCC;
+  height: 180px;
+  @include tab {
+    height: auto;
+  }
+  img.helper {
+    width: 100%;
+    height: auto;
+    float: left;
+  }
+  .map-cover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: rgba(0,0,0,.2);
+  }
+  .map-iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    iframe {
+      width: 100%!important;
+      height: 100%!important;
+    }
+  }
+}
+
+.form-wrapper {
+  .wrapper {
+    padding-bottom: 80px;
+    @include tab {
+      padding-bottom: 130px;
+    }
+  }
+  .flexwrap {
+    @include flexgroup();
+  }
+  .info {
+    width: 100%;
+    position: relative;
+    &.left {
+      padding-top: 50px;
+      @include tab {
+        padding-top: 100px;
+        width: 40%;
+      }
+    }
+    &.right {
+      background: #f3f3f3;
+      margin-top: 20px;
+      padding-bottom: 70px;
+      padding: 30px 30px 70px 30px;
+      @include tab {
+        top: -50px;
+        width: 60%;
+        margin-top: 0;
+        padding: 5vw 5vw 6vw;
+      }
+    }
+    .title-large {
+      border-bottom: 2px solid $primary;
+      padding-bottom: 50px;
+      margin-bottom: 50px;
+    }
+    &.left {
+      @include tab {
+        padding-right: 4vw;
+      }
+    }
+  }
+  .title-large {
+    margin: 0 0 10px;
+    font-size: 2.5em;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .small-title {
+    color: $primary;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin:0 0 30px;
+  }
+  .contact-info {
+    font-weight: 500;
+  }
+  .contact-form {
+    background: #f3f3f3;
+    position: relative;
+    // padding: 30px 30px 0;
+    @include tab {
+      // padding: 5vw 5vw 0;
+      margin-top: 0;
+    }
+    .gfield_label {
+      display: none!important;
+    }
+    .gform_wrapper.gravity-theme {
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        border: 1px solid #FFF;
+        border-radius: 0;
+        background: #FFF;
+        outline: none;
+        &:focus {
+          box-shadow: 0 0 15px rgba(0,0,0,0.2);
+          border-color: #CCC;
+        }
+      }
+      input[type="text"],
+      input[type="email"] {
+        height: 50px;
+      }
+      .gfield textarea.large {
+        height: 120px;
+      }
+      .gfield {
+        margin-bottom: 10px;
+      }
+      ::placeholder {
+        color: #000;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      .gform_footer {
+        text-align: center;
+        position: relative;
+        top: 16px;
+        margin: 15px 0 20px;
+        padding: 0 0 0;
+        z-index: 15;
+        @include tab {
+          text-align: right;
+        }
+        img {
+          display: inline-block;
+          position: absolute;
+          right: 20px;
+          bottom: -10px;
+          z-index: 5;
+        }
+        input.gform_button {
+          border-radius: 0;
+          -webkit-appearance:none;
+          border: none;
+          background: #000;
+          color: #FFF;
+          text-transform: uppercase;
+          font-size: 13px;
+          font-weight: 600;
+          padding: 10px 30px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 40px;
+          z-index: 10;
+          margin: 0 0;
+          visibility: hidden;
+          @include tab {
+            width: 165px;
+          }
+        }
+      }
+    }
+    .gform_wrapper .gform_validation_errors {
+      padding: 10px 10px 10px 40px;
+      font-size: 12px;
+    }
+    .gform_wrapper .gfield_validation_message, .gform_wrapper .validation_message {
+      padding: 0 0;
+      font-size: 12px;
+      background: transparent;
+      border: none;
+    }
+    .gform_wrapper.gravity-theme .gform_validation_error {
+      margin-bottom: 80px;
+      // @include tab {
+      //   .gform_footer {
+      //     top: 16px;
+      //   }
+      // }
+    }
+    a.submit-button {
+      display: inline-block;
+      text-decoration: none;
+      background: #000;
+      color: #FFF;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 10px 30px;
+      position: relative;
+      width: 100%;
+      letter-spacing: 2px;
+      text-align: center;
+      @include tab {
+        width: 165px;
+      }
+      span {
+        display: inline-block;
+        position: relative;
+        left: -10vw;
+        @include tab {
+          left: -22px;
+        }
+      }
+      i.arrow {
+        display: inline-block;
+        width: 45px;
+        height: 1px;
+        background: #FFF;
+        position: absolute;
+        top: 50%;
+        right: 25vw;
+        transform: translateY(-50%);
+        margin-left: 5px;
+        transition: all ease .3s;
+        @include tab {
+          right: 20px;
+        }
+        &:before, &:after {
+          content:"";
+          width: 9px;
+          height: 1px;
+          background: #FFF;
+          position: absolute;
+          top: 0;
+          right: -1px;
+        }
+        &:before {
+          transform: translateY(-3px) rotate(45deg);
+        }
+        &:after {
+          transform: translateY(3px) rotate(-45deg);
+        }
+      }
+      &:hover {
+        background: $primary;
+        i.arrow {
+          transform: translateY(-50%) translateX(5px);
+        }
+      }
+    }
+    .custom-button {
+      width: 100%;
+      position: absolute;
+      bottom: -54px;
+      left: 0;
+      text-align: center;
+      @include tab {
+        text-align: right;
+      }
+    }
   }
 }
 
