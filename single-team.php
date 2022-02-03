@@ -104,7 +104,7 @@ get_header(); ?>
         $args1 = array(
           'posts_per_page'=> 1,
           'post_type'   => $posttype,
-          'post_status' => 'offset_prev',
+          'post_status' => 'publish',
           'offset' => $offset_prev
         );
 
