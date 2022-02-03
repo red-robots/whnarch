@@ -1663,6 +1663,32 @@ body.single-projects .post-type-navigation{width:100%;position:absolute;left:0;b
 .teamList .entries .pagelink span.jobtitle{font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase}
 .teamList .entries .pagelink img{width:100%;height:auto}
 .teamList .entries .pagelink:hover{-webkit-box-shadow:0 0 18px rgba(0,0,0,.2);box-shadow:0 0 18px rgba(0,0,0,.2);-webkit-transform:translateY(-8px);transform:translateY(-8px)}
+.staff-details-page .section-name{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;background:#f3f3f3}
+.staff-details-page .photo,.staff-details-page .info{width:100%;position:relative}
+.staff-details-page .section-name.full{text-align:center}
+.staff-details-page .section-name.full .info .titlediv:after{margin:30px auto 20px}
+.staff-details-page .section-name.full .info .titlediv .page-title,.staff-details-page .section-name.full .info .titlediv .jobtitle{text-align:center}
+.staff-details-page .photo span{display:block;width:100%;height:100%;background-size:cover;background-position:center;background-repeat:no-repeat;position:absolute;top:0;left:0}
+.staff-details-page .photo img.resizer{width:100%;height:auto;float:left}
+.staff-details-page .info{padding:30px 20px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-line-pack:center;align-content:center}
+.staff-details-page .info .inner{width:100%}
+.staff-details-page .info .titlediv{position:relative}
+.staff-details-page .info .titlediv:after{content:"";display:block;width:18vw;height:2px;background:#ed3742;margin-top:30px}
+.staff-details-page .info h1{font-size:25px;font-weight:600;line-height:1.2;margin:0 0 5px}
+.staff-details-page .info .jobtitle{font-size:16px;font-weight:600;line-height:1.1;letter-spacing:1px;text-transform:uppercase}
+.staff-details-page .educations{margin-top:30px}
+.staff-details-page .educations .skill{margin-bottom:25px}
+.staff-details-page .educations .skill .t1{color:#ed3742;font-size:11px;font-weight:600;line-height:1.1;letter-spacing:1px;text-transform:uppercase}
+.staff-details-page .educations .skill .t2{font-size:14px;font-weight:600}
+.staff-details-page .educations .skill:last-child{margin-bottom:0}
+.staff-details-page .section-bio{padding-top:6vw;padding-bottom:6vw}
+.staff-details-page .post-type-navigation a.prev span.wrap{-webkit-transform:translateX(20px);transform:translateX(20px)}
+.staff-details-page .post-type-navigation a.next span.wrap{-webkit-transform:translateX(20px);transform:translateX(20px)}
+.staff-details-page .post-type-navigation a.prev:hover span.wrap{-webkit-transform:translateX(0);transform:translateX(0)}
+.staff-details-page .post-type-navigation a.next:hover span.wrap{-webkit-transform:translateX(38px);transform:translateX(38px)}
+.staff-details-page .post-type-navigation a.next span.txt{position:absolute;top:50%;right:40px;-webkit-transform:translateY(-50%);transform:translateY(-50%)}
+.staff-details-page .site-main{position:relative;padding-bottom:60px}
+.staff-details-page .post-type-navigation{position:absolute;left:0;bottom:0;width:100%}
 .site-footer{color:#fff;width:100%;float:left;background-image:url("images/tagline.png");background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#141414}
 .site-footer .footer-contact{text-align:center;padding:60px 0}
 .site-footer .footer-contact .t1{font-size:15px;font-weight:600;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px}
@@ -1704,6 +1730,9 @@ body.single-projects .post-type-navigation{width:100%;position:absolute;left:0;b
 .form-wrapper .contact-form .custom-button{text-align:right}
 .teamList{margin-top:60px}
 .teamList .entries .info{width:33.33%}
+.staff-details-page .photo,.staff-details-page .info{width:50%}
+.staff-details-page .info h1{font-size:35px}
+.staff-details-page .info{padding:2vw 5vw}
 }@media(min-width:960px){.project-full-info .infocol.left{width:30%}
 .project-full-info .infocol.right{width:70%}
 .carousel-container img.resizer{height:600px}
