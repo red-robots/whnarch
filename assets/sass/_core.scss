@@ -1746,6 +1746,14 @@ body.single-projects  {
 }
 
 .staff-details-page {
+  &.content-area-full {
+    width: 100%;
+    float: left;
+  }
+  #main {
+    width: 100%;
+    float: left;
+  }
   .section-name {
     @include flexgroup();
     @include flexbox-justify(center);

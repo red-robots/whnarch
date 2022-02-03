@@ -56,7 +56,7 @@ get_header(); ?>
       </div>
 
       <?php if ( get_the_content() ) { ?>
-	    <div class="section-bio">
+	    <div class="section-bio full">
         <div class="wrapper">
           <?php the_content(); ?>
         </div>
