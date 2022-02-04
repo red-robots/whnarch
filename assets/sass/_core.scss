@@ -634,7 +634,10 @@ body.home {
   .entry-content {
     width: 100%;
     float: left;
-    margin: 50px 0;
+    margin: 50px 0 30px;
+    @include tab {
+      margin: 50px 0;
+    }
   }
 }
 
@@ -655,6 +658,9 @@ body.home {
   width: 100%;
   float: left;
   margin: 0 0 50px;
+  @include tab {
+    margin-top: 30px;
+  }
 }
 .project-columns {
   .flexwrap {
