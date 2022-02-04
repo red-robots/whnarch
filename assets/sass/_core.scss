@@ -62,7 +62,7 @@ a {
     transform: scaleX(0);
   }
 	&:hover {
-		color: tint($primary,50%);
+		// color: tint($primary,50%);
     &:after {
       transform: scaleX(1);
     }
@@ -150,6 +150,11 @@ h3 {font-size:16px;text-transform:uppercase;}
     width: 70px;
     width: 20%;
     min-height: 90px;
+  }
+  a.custom-logo-link {
+    &:after {
+      display: none;
+    }
   }
   h1 {
     width: 100%;

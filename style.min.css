@@ -1406,7 +1406,6 @@ section:focus,div:focus{outline:0}
 a,input,button,select,textarea{-webkit-transition:all ease .3s;transition:all ease .3s}
 a{display:inline-block;color:#ed3742;text-decoration:none;position:relative;overflow:hidden;top:8px}
 a:after{content:"";background:#ed3742;display:inline-block;width:100%;height:1px;margin:0 auto;position:absolute;bottom:0;left:0;-webkit-transition:all ease .3s;transition:all ease .3s;-webkit-transform:scaleX(0);transform:scaleX(0)}
-a:hover{color:#f69ba1}
 a:hover:after{-webkit-transform:scaleX(1);transform:scaleX(1)}
 h1{font-size:45px}
 h2{font-size:32px}
@@ -1428,6 +1427,7 @@ h3{font-size:16px;text-transform:uppercase}
 .wrapper.sm{max-width:800px}
 .wrapper.wide{max-width:100%}
 #site-logo{width:55px;position:relative;z-index:50;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+#site-logo a.custom-logo-link:after{display:none}
 #site-logo h1{width:100%;font-size:20px;margin:0;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 #site-logo span.logo{display:block;width:100%}
 #site-logo span.logo a,#site-logo span.logo img{display:block;width:100%;height:auto}
