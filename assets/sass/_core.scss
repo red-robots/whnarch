@@ -476,9 +476,12 @@ h3 {font-size:16px;text-transform:uppercase;}
     span {
       display: inline-block;
       width: 2px;
-      height: 6vh;
+      height: 5vh;
       background: $primary;
       position: relative;
+      @include tab {
+        height: 6vh;
+      }
     }
   }
 }
@@ -529,12 +532,15 @@ h3 {font-size:16px;text-transform:uppercase;}
   }
   .wrap {
     width: 100%;
-    padding: 20px 20px 1.5vw;
+    padding: 20px 20px 18vw;
     position: relative;
     z-index: 5;
+    text-align: center;
     @include tab {
       width: 95%;
       margin: 0 auto;
+      padding: 20px 20px 1.5vw;
+      text-align: left;
     }
     .text {
       width: 100%;
@@ -547,10 +553,13 @@ h3 {font-size:16px;text-transform:uppercase;}
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination {
   z-index: 120;
-  text-align: right;
+  text-align: center;
   width: 95%;
   left: 50%;
   transform: translateX(-50%);
+  @include tab {
+    text-align: right;
+  }
 }
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-bullet {
@@ -569,6 +578,12 @@ h3 {font-size:16px;text-transform:uppercase;}
 .swiper-button-next,
 .swiper-button-prev {
   display: none;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  @include max($tabwidth - 1px) {
+    bottom: 10vw;
+  }
 }
 
 body.home {
