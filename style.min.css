@@ -1693,6 +1693,13 @@ body.single-projects .post-type-navigation{width:100%;position:absolute;left:0;b
 .staff-details-page .post-type-navigation a.next span.txt{position:absolute;top:50%;right:40px;-webkit-transform:translateY(-50%);transform:translateY(-50%)}
 .staff-details-page .site-main{position:relative;padding-bottom:60px}
 .staff-details-page .post-type-navigation{position:absolute;left:0;bottom:0;width:100%}
+.page404 .page-title{margin:0}
+.page404 .content404{position:relative;top:-15px}
+.sitemap-links ul{margin:0;padding:0 0 0 20px;list-style:none}
+.sitemap-links ul li{line-height:1.3;margin:0 0 5px;position:relative;padding-left:14px}
+.sitemap-links ul li:before{content:"";display:block;width:6px;height:6px;background:#ed3742;position:absolute;top:14px;left:0}
+.sitemap-links ul li ul li{padding-left:12px}
+.sitemap-links ul li ul li:before{border-radius:100px;border:1px solid #ed3742;background:transparent}
 .site-footer{color:#fff;width:100%;float:left;background-image:url("images/tagline.png");background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#141414}
 .site-footer .footer-contact{text-align:center;padding:60px 0}
 .site-footer .footer-contact .t1{font-size:15px;font-weight:600;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px}
